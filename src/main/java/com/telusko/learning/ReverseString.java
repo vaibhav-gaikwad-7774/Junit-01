@@ -1,25 +1,26 @@
 package com.telusko.learning;
 
 public class ReverseString {
-    public static void main(String[] args) {
-        // Input string (hardcoded)
-        String input = "Hello World";
 
-        // Method 1: Using StringBuilder
-        String reversed = new StringBuilder(input).reverse().toString();
-        System.out.println("Reversed string (using StringBuilder): " + reversed);
+	public String reverseString(String str) {
+		// TODO Auto-generated method stub
+		char[] charArray = str.toCharArray();
+		int left = 0;
+		int right = charArray.length - 1;
+		
+		while(left<right) {
+			char temp = charArray[left];
+			charArray[left] = charArray[right];
+			charArray[right] = temp;
+			
+			left++;
+			right--;
+		}
+		
+		return new String(charArray);
+		
+	}
 
-        // Method 2: Using a loop
-        String reversedLoop = reverseUsingLoop(input);
-        System.out.println("Reversed string (using loop): " + reversedLoop);
-    }
+	
 
-    // Method to reverse string using a loop
-    public static String reverseUsingLoop(String str) {
-        StringBuilder reversed = new StringBuilder();
-        for (int i = str.length() - 1; i >= 0; i--) {
-            reversed.append(str.charAt(i));
-        }
-        return reversed.toString();
-    }
 }
