@@ -1,11 +1,11 @@
 package com.telusko.learning;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
-//import org.junit.Test;
-
-public class ReverseStringTest {
+class ReverseString1Test {
 
 	@Test
 	public void test() {
@@ -13,6 +13,5 @@ public class ReverseStringTest {
 
         // Test Case 1: Regular string
         assertEquals("avaj", reverse.reverseString("java"));
-
+        assertEquals("vaibhav", reverse.reverseString("vahbiav"));
 }}
- 
