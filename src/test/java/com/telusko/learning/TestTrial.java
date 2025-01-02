@@ -10,5 +10,11 @@ class TestTrial {
 	void test() {
 		assertEquals(6, 3+3);
 	}
+	
+	@Test
+	void testcomputesquareArea() {
+		Shapes shape = new Shapes();
+		assertEquals(576, shape.computeSquareArea(24));
+	}
 
 }
