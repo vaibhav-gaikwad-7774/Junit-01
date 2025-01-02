@@ -3,27 +3,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>com.telusko.learning</groupId>
-  <artifactId>Junit-01</artifactId>
+  <groupId>com.telusko</groupId>
+  <artifactId>Junit5-06maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <!-- Define properties for reusable configurations -->
   <properties>
     <maven.compiler.source>14</maven.compiler.source>
-    <maven.compiler.target>5.8.0</maven.compiler.target>
+    <maven.compiler.target>14</maven.compiler.target>
     <junit.jupiter.version>5.10.0</junit.jupiter.version>
   </properties>
-
+  
+  <!-- Dependencies -->
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <version>5.8.0</version>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
   
- <build>
+  <!-- Build plugins for Maven compiler and Surefire -->
+  <build>
     <plugins>
+      <!-- Maven Compiler Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -33,6 +37,8 @@
           <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
+      
+      <!-- Maven Surefire Plugin for running tests -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -44,5 +50,5 @@
         </configuration>
       </plugin>
     </plugins>
-  </build> 
+  </build>
 </project>
