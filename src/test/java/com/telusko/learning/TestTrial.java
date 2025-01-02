@@ -14,7 +14,7 @@ class TestTrial {
 	@Test
 	void testcomputesquareArea() {
 		Shapes shape = new Shapes();
-		assertEquals(576, shape.computeSquareArea(24));
+		assertEquals(576, shape.testcomputeSquareArea(24));
 	}
 
 }
