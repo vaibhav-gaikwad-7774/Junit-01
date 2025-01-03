@@ -59,15 +59,58 @@ template as per seen
 
 
 
+14.56:
+
+
+@Test
+	void testcomputeSquareArea() {
+		Shapes shape = new Shapes();
+		assertNotEquals(161.0, shape.testcomputeSquareArea(4)); 
+
+
+in these when we correct statement gives assertEquals gives test passed
+and in asserNotEquals is tottally opposite to the 
+asserEqual
+
+which is like the example
+these is assertEquals example
+
+@Test
+	void testcomputeSquareArea() {
+		Shapes shape = new Shapes();
+		assertEquals(16.0, shape.testcomputeSquareArea(4)); 
 
 
 
+these is assertNotEquals example
+
+
+@Test
+	void testcomputeSquareArea() {
+		Shapes shape = new Shapes();
+		assertEquals(16.0, shape.testcomputeSquareArea(4)); 
 
 
 
+TestAssertTrue function:
 
+Example
 
+package com.telusko.learning;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestAssertTrue {
+
+	@Test
+	void test() {
+		String str = "Junit";
+		assertTrue(str.equals("Junit"));
+	}
+
+}
 
 
 

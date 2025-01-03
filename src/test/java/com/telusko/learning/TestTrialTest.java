@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class TestTrialTest {
+	Shapes shape = new Shapes();
 
 	@Test
 	void test() {
@@ -13,10 +14,22 @@ class TestTrialTest {
 	}
 	@Test
 	void testcomputeSquareArea() {
-		Shapes shape = new Shapes();
-		assertEquals(576.0, shape.testcomputeSquareArea(24)); 
+		assertEquals(161.0, shape.testcomputeSquareArea(4)); 
+		
 		
 	}
+	@Test
+	void testcomputeSquareArea_WithMessage() {
+		assertEquals(161.0, shape.testcomputeSquareArea(4), "Message to dev is testcase failing"); 
+	}
+	
+	@Test
+	void testcomputeSquareArea_Supplier() {
+		assertEquals(16.0, shape.testcomputeSquareArea(4),()-> "Message to dev is testcase failing"); 
+	}
+	
+
+	
 	
 }
 
