@@ -1,6 +1,6 @@
 package com.telusko.dao;
 
-public class JavaCourse implements Course {
+public abstract class JavaCourse implements Course {
 	
 	@Override
 	public boolean CoursePurchased() {
@@ -8,12 +8,12 @@ public class JavaCourse implements Course {
 		return false;
 	}
 
-	@Override
-	public boolean coursePurchased() {
-		return true;
+//	@Override
+//	public boolean coursePurchased() {
+//		return true;
 	}
 
-}
+
 
 
 //15.5

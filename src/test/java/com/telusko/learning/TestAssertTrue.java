@@ -9,7 +9,7 @@ class TestAssertTrue {
 	@Test
 	void test() {
 		String str = "Junit";
-		assertTrue(str.equals("Junit"));
+		assertFalse(str.length()<5);
 	}
 
 }
