@@ -116,6 +116,87 @@ assert array equals() method
 15.18
 
 
+AssertArrayEqual Function which is used to show any array equal 
+function which is used to calculate the string easily in the bellow 
+example :
+
+"package com.telusko.learning;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+import java.util.Arrays;
+
+import org.junit.jupiter.api.Test;
+
+class ArrayTesting {
+    @Test
+    void testArray() {
+        int[] expected = {2, 4, 6, 8};
+        int[] actual = {4, 8, 6, 2};
+        
+        
+        System.out.println(actual);
+        assertArrayEquals(expected, actual, "The arrays are not equal!");
+    }
+}
+
+
+"
+
+
+when in the array Element in the Exception is not matching upto the mark
+then it will be printing the proper exception handling the exception
+
+
+"package com.telusko.learning;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestException {
+
+	@Test
+	void testSortingArray_exception() {
+		try {
+		SortingArray array = new SortingArray();
+		int unsorted[] = null;
+		int sortedArray[] = array.sortingArray(unsorted);
+//		for(int elem:sortedArray) {
+//			System.out.print(elem);
+//		}
+	}
+		catch(NullPointerException e){
+			System.out.println("Exception generated");
+			
+		}
+
+}}
+" and the output will give exception because we declare a array Null
+in there
+
+
+"package com.telusko.learning;
+
+import java.util.Arrays;
+
+public class SortingArray {
+	public int[] sortingArray(int[] array) {
+		Arrays.sort(array);
+		return array;
+		
+	}
+
+}
+"
+
+
+
+
+
+
+
+
 
 
 
