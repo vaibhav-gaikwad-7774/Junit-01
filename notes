@@ -188,7 +188,68 @@ public class SortingArray {
 	}
 
 }
+
+
+
+
+
 "
+
+
+
+
+this will be checking the test cases using actual excecution and 
+machinary excecution of the time:
+
+package com.telusko.learning;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.time.Duration;
+
+import org.junit.jupiter.api.Test;
+
+class TestingPerformance {
+
+	@Test
+	void testSortingMethod_Performance() {
+		SortingArray  array = new SortingArray();
+		
+		int unsorted[] = {2,6,1};
+		
+		assertTimeout(Duration.ofMillis(10), ()-> array.sortingArray(unsorted));
+		
+	}
+
+}a
+
+
+
+sortingArray.java
+
+package com.telusko.learning;
+
+import java.util.Arrays;
+
+public class SortingArray {
+	public int[] sortingArray(int[] array) {
+		for(int i = 0; i<1000000; i++) {
+			Arrays.sort(array);
+			
+		}
+		return array;
+		
+	}
+
+}
+
+
+asserttimeout use t check the junit test case will exceucute in certain timelimit
+or not
+
+
+15.44
+
 
 
 
